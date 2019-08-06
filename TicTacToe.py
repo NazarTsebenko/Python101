@@ -11,6 +11,15 @@ for i in range(3) :
     print("|", gameboard[0+i*3], "|", gameboard[1+i*3], "|", gameboard[2+i*3], "|")
     print("-------------")
 
+user_symbol = random.choice(['X', 'O'])                 #Random choice to define who plays which symbol with.
+
+if user_symbol == 'X' :
+    cpu_symbol = 'O'
+    print("You play 'X'")
+else :
+    cpu_symbol = 'X'
+    print("You play 'O'")
+
 is_winner = False
 turns = 9
 user_turn = random.choice([True, False])                #Random choise to define who goes first.
@@ -35,20 +44,20 @@ while is_winner == False and turns != 0 :               #Game continues until wi
         for cell in cells :                             #Update situation on the gameboard.
             if cell == digit_cpu :
                 idx = cells.index(digit_cpu)
-                cells[idx] = 'O'
+                cells[idx] = cpu_symbol
                 print("-------------")                  #Visualize gameboard with actual situation.
                 for i in range(3) :
                     print("|", cells[i*3], "|", cells[1+i*3], "|", cells[2+i*3], "|")
                     print("-------------")
                                                                     #Check whether there is a winner.
-                if (cells[0] == cells[1] == cells[2] == 'O') or \
-                   (cells[3] == cells[4] == cells[5] == 'O') or \
-                   (cells[6] == cells[7] == cells[8] == 'O') or \
-                   (cells[0] == cells[3] == cells[6] == 'O') or \
-                   (cells[1] == cells[4] == cells[7] == 'O') or \
-                   (cells[2] == cells[5] == cells[8] == 'O') or \
-                   (cells[0] == cells[4] == cells[8] == 'O') or \
-                   (cells[2] == cells[4] == cells[6] == 'O') :
+                if (cells[0] == cells[1] == cells[2] == cpu_symbol) or \
+                   (cells[3] == cells[4] == cells[5] == cpu_symbol) or \
+                   (cells[6] == cells[7] == cells[8] == cpu_symbol) or \
+                   (cells[0] == cells[3] == cells[6] == cpu_symbol) or \
+                   (cells[1] == cells[4] == cells[7] == cpu_symbol) or \
+                   (cells[2] == cells[5] == cells[8] == cpu_symbol) or \
+                   (cells[0] == cells[4] == cells[8] == cpu_symbol) or \
+                   (cells[2] == cells[4] == cells[6] == cpu_symbol) :
                     is_winner = True
                     print('CPU won.')
                 else :
@@ -65,20 +74,20 @@ while is_winner == False and turns != 0 :               #Game continues until wi
         for cell in cells :                              #Update situation on the gameboard.
             if cell == digit :
                 idx = cells.index(digit)
-                cells[idx] = 'X'
+                cells[idx] = user_symbol
                 print("-------------")                   #Visualize gameboard with actual situation.
                 for i in range(3) :
                     print("|", cells[i*3], "|", cells[1+i*3], "|", cells[2+i*3], "|")
                     print("-------------")
                                                                     #Check whether there is a winner.
-                if (cells[0] == cells[1] == cells[2] == 'X') or \
-                   (cells[3] == cells[4] == cells[5] == 'X') or \
-                   (cells[6] == cells[7] == cells[8] == 'X') or \
-                   (cells[0] == cells[3] == cells[6] == 'X') or \
-                   (cells[1] == cells[4] == cells[7] == 'X') or \
-                   (cells[2] == cells[5] == cells[8] == 'X') or \
-                   (cells[0] == cells[4] == cells[8] == 'X') or \
-                   (cells[2] == cells[4] == cells[6] == 'X') :
+                if (cells[0] == cells[1] == cells[2] == user_symbol) or \
+                   (cells[3] == cells[4] == cells[5] == user_symbol) or \
+                   (cells[6] == cells[7] == cells[8] == user_symbol) or \
+                   (cells[0] == cells[3] == cells[6] == user_symbol) or \
+                   (cells[1] == cells[4] == cells[7] == user_symbol) or \
+                   (cells[2] == cells[5] == cells[8] == user_symbol) or \
+                   (cells[0] == cells[4] == cells[8] == user_symbol) or \
+                   (cells[2] == cells[4] == cells[6] == user_symbol) :
                     turn_done = True
                     is_winner = True
                     print('You won.')
