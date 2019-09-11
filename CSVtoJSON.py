@@ -23,7 +23,7 @@ def CSVtoJSONprocessing() :
                     row = dict(row)                                          #Convert each record from csv - from DictReader to simple dictionary.
                     for key in row.keys() :
                         if key == 'password' :                               #Replace value in column "password" with * symbols (10 symbols).
-                            row[key] = '**********'
+                            del row[key]
                             break;
                     json.dump(row, json_file, indent = 4)                    #Write to json each record per line, indent for better view.
                     json_file.write('\n')
