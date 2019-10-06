@@ -1,0 +1,13 @@
+project_name,project_description,project_deadline,task_id,task_priority,task_details,task_status,task_deadline,task_completed
+CALLCENTER_AI,Development AI Bots for customer's callcenter,2019-11-01,1,High,Create Architecture,Pending,2019-10-15,,
+CALLCENTER_AI,Development AI Bots for customer's callcenter,2019-11-01,2,High,Development,New,2019-10-20,,
+CALLCENTER_AI,Development AI Bots for customer's callcenter,2019-11-01,4,High,Testing,New,2019-10-24,,
+CALLCENTER_AI,Development AI Bots for customer's callcenter,2019-11-01,5,High,Demo&UAT,New,2019-10-30,,
+CALLCENTER_AI,Development AI Bots for customer's callcenter,2019-11-01,6,High,Release,New,2019-11-01,,
+TRANSPORT_DEPARTMENT_AI,Development AI Bots for customer's department of transportations,2019-12-24,7,Medium,Create Architecture,New,2019-11-10,,
+TRANSPORT_DEPARTMENT_AI,Development AI Bots for customer's department of transportations,2019-12-24,8,Medium,Development,New,2019-11-25,,
+TRANSPORT_DEPARTMENT_AI,Development AI Bots for customer's department of transportations,2019-12-24,9,Medium,Testing,New,2019-12-10,,
+TRANSPORT_DEPARTMENT_AI,Development AI Bots for customer's department of transportations,2019-12-24,10,Medium,Demo&UAT,New,2019-12-20,,
+TRANSPORT_DEPARTMENT_AI,Development AI Bots for customer's department of transportations,2019-12-24,11,Medium,Release,New,2019-12-24,,
+ETL_001,Create ETL workflow for department of statistics,2020-03-01,12,Low,ADF Training,New,2020-01-15,,
+ETL_001,Create ETL workflow for department of statistics,2020-03-01,13,Low,Road Map Creation,New,2020-01-20,,
