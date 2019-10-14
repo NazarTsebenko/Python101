@@ -121,6 +121,7 @@ def DropMongoDB() :                                 #Drop mongo database with na
             conn_mongo.drop_database('test')
     except :
         print("Can't drop existing mongo database \"test\".")
+        raise SystemExit()                          #Exit program in case error, don't run the next functions
 
 
 
